@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './SearchBar';
+import { ListMovies } from './features/list-movies/ListMovies';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <SearchBar />
+        <ListMovies />
       </header>
     </div>
   );

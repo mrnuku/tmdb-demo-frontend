@@ -33,3 +33,16 @@
     width: 10%;
     object-fit: contain;
 }
+
+.ratecontainer {
+  display: flex;
+  align-items: center;
+}
+
+.rate {
+}
+
+.ratetext {
+  font-size: 14px;
+  padding-left: 8px;
+}

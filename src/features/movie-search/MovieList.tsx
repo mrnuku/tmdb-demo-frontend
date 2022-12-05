@@ -17,6 +17,13 @@ function MovieListRecord(props: any) {
         <p className={styles.paragraph}>
           { props.record.overview }
         </p>
+        <div className={styles.ratecontainer}>
+          <progress id="rate" value={ props.record.vote_average } max="10" className={styles.rate}>
+          </progress>
+          <div className={styles.ratetext}>
+            { props.record.vote_average } / 10.0
+          </div>
+        </div>
       </div>
     </section>
   );

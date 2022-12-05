@@ -34,3 +34,9 @@
     width: 20%;
     object-fit: contain;
 }
+
+.link {
+  float: left;
+  font-size: 16px;
+  padding-right: 16px;
+}

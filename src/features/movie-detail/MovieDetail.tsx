@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import {
+  Link,
   useParams,
 } from "react-router-dom";
 import { useSelector } from 'react-redux';
@@ -27,11 +28,17 @@ function MovieDetail() {
             { detailResult.title }
           </h1>
           <section className={styles.section}>
-            <img src={detailResult.belongs_to_collection.poster_path ? "https://image.tmdb.org/t/p/w500" + detailResult.belongs_to_collection.poster_path : "https://via.placeholder.com/200C/O"} alt="" className={styles.image} />
+            <img src={detailResult.poster_path ? "https://image.tmdb.org/t/p/w500" + detailResult.poster_path : "https://via.placeholder.com/200C/O"} alt="" className={styles.image} />
             <div className={styles.content}>
               <p className={styles.paragraph}>
-                { detailResult.overview }
+                { detailResult.imdb_api.plotShort.plainText }
               </p>
+              <a href={detailResult.imdb_api.url} className={styles.link}>
+                Wikipedia
+              </a>
+              <a href={`https://www.imdb.com/title/${detailResult.imdb_id}`} className={styles.link}>
+                IMDB
+              </a>
             </div>
           </section>
         </header>

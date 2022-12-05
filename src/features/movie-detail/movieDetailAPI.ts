@@ -26,6 +26,7 @@ export interface DetailResult {
     video:                 boolean;
     vote_average:          number;
     vote_count:            number;
+    imdb_api:              IMDBApiResult;
 }
 
 export interface BelongsToCollection {
@@ -56,6 +57,25 @@ export interface SpokenLanguage {
     english_name: string;
     iso_639_1:    string;
     name:         string;
+}
+
+export interface IMDBApiResult {
+    imDbId:          string;
+    title:           string;
+    fullTitle:       string;
+    type:            string;
+    year:            string;
+    language:        string;
+    titleInLanguage: string;
+    url:             string;
+    plotShort:       Plot;
+    plotFull:        Plot;
+    errorMessage:    string;
+}
+
+export interface Plot {
+    plainText: string;
+    html:      string;
 }
 
 export function detailForIdCall(id: number) {

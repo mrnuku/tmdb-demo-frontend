@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useAppDispatch } from '../../app/hooks';
-import {
-  searchForTerm,
-} from './movieSearchSlice';
+import { searchForTerm } from './movieSearchSlice';
+import styles from './SearchBar.module.css';
 
 const SearchBar = () => {
   const [inputField , setInputField] = useState({
@@ -31,8 +30,9 @@ const SearchBar = () => {
       onChange={inputsHandler}
       name="term"
       value={inputField.term}
+      className={styles.input}
     />
-    <button type="submit">Search</button>
+    <button type="submit" className={styles.button}>Search</button>
   </form>
 }
 

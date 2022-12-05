@@ -26,34 +26,6 @@
   color: rgb(112, 76, 182);
 }
 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-ul {
-  text-align: left;
-  width: 400px;
-}
-
-input {
-  width: 40%;
-  margin: 4px;
-  padding: 4px;
-  font-size: 18px;
-}
-
-button {
-  margin: 4px;
-  padding: 4px;
-  font-size: 18px;
-}
-
 @keyframes App-logo-float {
   0% {
     transform: translateY(0);

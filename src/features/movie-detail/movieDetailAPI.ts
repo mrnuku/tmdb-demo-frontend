@@ -80,7 +80,7 @@ export interface Plot {
 
 export function detailForIdCall(id: number) {
   return new Promise<{ data: DetailResult }>((resolve, reject) =>
-    axios.get("/detail", {params: {id}})
+    axios.get("/api/detail", {params: {id}})
     .then(res => resolve({ data: res.data }))
   )
 }

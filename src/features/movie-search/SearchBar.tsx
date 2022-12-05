@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { useAppDispatch } from './app/hooks';
+import { useAppDispatch } from '../../app/hooks';
 import {
   searchForTerm,
-} from './features/list-movies/listMoviesSlice';
+} from './movieSearchSlice';
 
 const SearchBar = () => {
   const [inputField , setInputField] = useState({

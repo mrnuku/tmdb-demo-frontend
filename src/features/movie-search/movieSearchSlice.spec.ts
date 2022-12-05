@@ -1,6 +1,6 @@
 import listMoviesReducer, {
-  ListMoviesState,
-} from './listMoviesSlice';
+  MovieSearchState,
+} from './movieSearchSlice';
 
 describe('counter reducer', () => {
 });

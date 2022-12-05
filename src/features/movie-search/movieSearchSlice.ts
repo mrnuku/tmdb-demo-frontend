@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { searchForTermCall } from './listMoviesAPI';
+import { searchForTermCall } from './movieSearchAPI';
 
 export interface SearchResult {
   page:          number;
@@ -26,26 +26,26 @@ export interface SearchResultRecord {
   vote_count:        number;
 }
 
-export interface ListMoviesState {
+export interface MovieSearchState {
   searchResult: null | SearchResult;
   status: 'idle' | 'loading' | 'failed';
 }
 
-const initialState: ListMoviesState = {
+const initialState: MovieSearchState = {
   searchResult: null,
   status: 'idle',
 };
 
 export const searchForTerm = createAsyncThunk(
-  'listMovies/searchForTerm',
+  'movieSearch/searchForTerm',
   async (term: string) => {
     const response = await searchForTermCall(term);
     return response.data;
   }
 );
 
-export const listMoviesSlice = createSlice({
-  name: 'listMovies',
+export const movieSearchSlice = createSlice({
+  name: 'movieSearch',
   initialState,
   reducers: {
   },
@@ -64,8 +64,8 @@ export const listMoviesSlice = createSlice({
   },
 });
 
-// export const { } = listMoviesSlice.actions;
+// export const { } = movieSearchSlice.actions;
 
-export const selectSearchResult = (state: RootState) => state.listMovies.searchResult;
+export const selectSearchResult = (state: RootState) => state.movieSearch.searchResult;
 
-export default listMoviesSlice.reducer;
+export default movieSearchSlice.reducer;

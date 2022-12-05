@@ -1,17 +1,17 @@
 import React from 'react';
 import SearchBar from './SearchBar';
-import { ListMovies } from './features/list-movies/ListMovies';
-import './App.css';
+import { MovieList } from './MovieList';
+import './MovieSearch.css';
 
-function App() {
+function MovieSearch() {
   return (
     <div className="App">
       <header className="App-header">
         <SearchBar />
-        <ListMovies />
+        <MovieList />
       </header>
     </div>
   );
 }
 
-export default App;
+export default MovieSearch;

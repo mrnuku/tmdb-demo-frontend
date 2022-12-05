@@ -1,30 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { searchForTermCall } from './movieSearchAPI';
-
-export interface SearchResult {
-  page:          number;
-  results:       SearchResultRecord[];
-  total_pages:   number;
-  total_results: number;
-}
-
-export interface SearchResultRecord {
-  adult:             boolean;
-  backdrop_path:     null | string;
-  genre_ids:         number[];
-  id:                number;
-  original_language: string;
-  original_title:    string;
-  overview:          string;
-  popularity:        number;
-  poster_path:       null | string;
-  release_date:      Date;
-  title:             string;
-  video:             boolean;
-  vote_average:      number;
-  vote_count:        number;
-}
+import {
+  SearchResult,
+  searchForTermCall,
+} from './movieSearchAPI';
 
 export interface MovieSearchState {
   searchResult: null | SearchResult;

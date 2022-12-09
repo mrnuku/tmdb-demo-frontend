@@ -32,6 +32,7 @@ export const movieSearchSlice = createSlice({
     builder
       .addCase(searchForTerm.pending, (state) => {
         state.status = 'loading';
+        state.searchResult = null;
       })
       .addCase(searchForTerm.fulfilled, (state, action) => {
         state.status = 'idle';

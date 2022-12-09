@@ -32,6 +32,7 @@ export const movieDetailSlice = createSlice({
     builder
       .addCase(detailForId.pending, (state) => {
         state.status = 'loading';
+        state.detailResult = null;
       })
       .addCase(detailForId.fulfilled, (state, action) => {
         state.status = 'idle';

@@ -34,6 +34,12 @@
     object-fit: contain;
 }
 
+@media (max-width: 600px) {
+  .image {
+    width: 25%;
+  }
+}
+
 .ratecontainer {
   display: flex;
   align-items: center;

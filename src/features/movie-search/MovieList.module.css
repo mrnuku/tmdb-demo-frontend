@@ -10,6 +10,12 @@
   margin: 8px;
 }
 
+@media (max-width: 600px) {
+  .section {
+    margin: 0px;
+  }
+}
+
 .paragraph {
   color: #555;
   display: flex;
@@ -37,6 +43,7 @@
 @media (max-width: 600px) {
   .image {
     width: 25%;
+    padding-left: 20px;
   }
 }
 
